@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 import lombok.Data;
 
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -21,6 +22,7 @@ public class CreditDTO {
     private BigDecimal monthlyPayment;
 
     @Schema(description = "Calculated final rate")
+    @NotNull
     private BigDecimal rate;
 
     @Schema(description = "Calculated psk")
